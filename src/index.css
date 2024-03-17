@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+  display: flexbox;
+}
+body{
+  background: rgb(237, 237, 237);
+}
+
+html {
+  font-family: sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+.text{
+  color: #fff;
+  text-align: center;
+  margin-top: 8rem;
+}
+
+.text h2{
+  color: #fba403;
+}

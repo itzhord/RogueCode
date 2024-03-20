@@ -1,82 +1,79 @@
 import { Link } from "react-router-dom";
 import SignInForm from "./signInForm";
-import Name from "../assets/contact.png";
-import Email from "../assets/mail.png";
-import Paassword from "../assets/password.png";
-import { useState, useEffect, useRef } from "react";
-import {
-  faCheck,
-  faTimes,
-  faInfoCircle,
-} from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Name from "../assets/contact.png"
+import Email from "../assets/mail.png"
+import Paassword from "../assets/password.png"
+import { useState, useRef, useEffect, useRef } from "react";
+import {faCheck, faTimes, faInfoCircle} from "@fortawesome/free-solid-svg-icons"
+import { FontAwesomeIcon} from "@fortawesome/react-fontawesome"
 import Regsuccess from "./Regsuccess";
 // import { withRouter } from "react-router-dom";
 // import Regsuccess from "./Regsuccess";
 
+const Sig = () => {
+  const userRef = useRef()
+  const errRef = useRef()
 
-const SignUpForm = () => { const [name, setName] = useState('')
-const [email, setEmail] = useState('')
-const [password, setPassword] = useState('')
-const [formValid, setFormValid] = useState(false);
-const [submit, setSubmit] = useState(false);
+ const [name, setName] = useState('')
+ const [email, setEmail] = useState('')
+ const [password, setPassword] = useState('')
+ const [formValid, setFormValid] = useState(false);
+ const [submit, setSubmit] = useState(false);
 
-const [nameError, setNameError] = useState('')
-const [emailError, setEmailError] = useState('')
-const [passwordError, setPasswordError] = useState('')
+ const [nameError, setNameError] = useState('')
+ const [emailError, setEmailError] = useState('')
+ const [passwordError, setPasswordError] = useState('')
 
-const userRegex = /^[a-zA-Z][a-zA-Z0-9-_]{3,23}&/
+ const User_Regex = /^[a-zA-Z][a-zA-Z0-9-_]{3,23}&/
+ const Pass_Regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*{!@#$}).{8,24}$/;
 
+ const nameRegex = /^[A-Za-z\s]+$/;
+ const emailRegex = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
 
-const nameRegex = /^[A-Za-z\s]+$/;
-const emailRegex = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
-const passRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*{!@#$}).{8,24}$/;
+ const handleNameChange = (e) => {
+    setName(e.target.value);
+    setNameError('');
+  }
 
-const handleNameChange = (e) => {
-   setName(e.target.value);
-   setNameError('');
- }
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
+    setEmailError('');
+  }
 
- const handleEmailChange = (e) => {
-   setEmail(e.target.value);
-   setEmailError('');
- }
+  const handlePasswordChange = (e) => {
+    setPassword(e.target.value);
+    setPasswordError('');
+  }
 
- const handlePasswordChange = (e) => {
-   setPassword(e.target.value);
-   setPasswordError('');
- }
- 
-
- const handleSubmit = (e) => {
-   e.preventDefault();
+  const handleSubmit = (e) => {
+    e.preventDefault();
 
 
 
-   let isValid = true;
+    let isValid = true;
 
-   if (!nameRegex.test(name.trim())) {
-     setNameError('Invalid First name');
-     isValid = false;
-   }
+    if (!nameRegex.test(name.trim())) {
+      setNameError('Invalid First name');
+      isValid = false;
+    }
 
-   if (!emailRegex.test(email.trim())) {
-     setEmailError('Invalid email address.');
-     isValid = false;      
-   }
+    if (!emailRegex.test(email.trim())) {
+      setEmailError('Invalid email address.');
+      isValid = false;      
+    }
 
-   if (!passRegex.test(password.trim())) {
-       setPasswordError('Invalid Password');
-       isValid = false;
-     }
+    if (!nameRegex.test(password.trim())) {
+        setPasswordError('Invalid Password');
+        isValid = false;
+      }
 
-   if (isValid) {
-     // Submit the form or perform other actions as needed
-     setSubmit(true);
-   } else {
-     setSubmit(false);
- }
- }
+    if (isValid) {
+      // Submit the form or perform other actions as needed
+      setSubmit(true);
+    } else {
+      setSubmit(false);
+  }
+  }
 
   return (
     <>
@@ -138,4 +135,4 @@ const handleNameChange = (e) => {
   );
 };
 
-export default SignUpForm;
+export default Sig;

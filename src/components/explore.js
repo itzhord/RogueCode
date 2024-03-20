@@ -16,7 +16,7 @@ const Explore = () => {
             Create webpages
           </h1>
           <h1 className="text-white relative bottom-[12px] text-[25px]">For your brand using React</h1>
-          <Link to="/Form" className="bg-transparent border border-gray-300 text-gray-300 hover:border-white  hover:text-black hover:bg-white py-1 px-5 rounded-2xl">Register Now</Link>
+          <Link to="/SignUp" className="bg-transparent border border-gray-300 text-gray-300 hover:border-white  hover:text-black hover:bg-white py-1 px-5 rounded-2xl">Register Now</Link>
         </div>
       </div>
       <div>

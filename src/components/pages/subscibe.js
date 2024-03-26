@@ -65,7 +65,7 @@ const Subscribe = () => {
     {
   !submit ? (
     <div>
-      <div className="w-100 h-[5vh] bg-blue-400">
+      <div className="w-100 h-[5vh] bg-[#2A00B7] ">
         <Link
           to="/"
           className="relative text-[12px] top-1.5 left-[85rem] bg-transparent border border-white text-white hover:border-white hover:text-blue-400 hover:bg-white py-1 px-5 rounded-2xl"
@@ -73,7 +73,7 @@ const Subscribe = () => {
           Homepage
         </Link>
       </div>
-      <div className="h-[65vh] w-[100] bg-blue-400">
+      <div className="h-[65vh] w-[100] bg-gradient-to-b from-[#2A00B7] to-[#14003a] ">
         <div className="relative text-white font-bold left-[20%] top-[7rem]">
         <h2 className="  text-[30px] mb-2"> Stay in touch with us </h2>
         <p className=" text-[15px] mb-1"> To get our latest offers and services </p >
@@ -119,7 +119,7 @@ const Subscribe = () => {
             
             <button onClick={handleSubmit} className="border-[3px] w-[20%] bg-blue-800 mt-4 text-white py-[4px] px-[6px] font-semibold ml-[17rem] mt-[1rem] rounded-2xl ">Submit</button>
           </div>
-          <div className="w-2/5 h-[40vh] p-[70px]  font-semibold text-white bg-blue-950">
+          <div className="w-2/5 h-[40vh] p-[70px]  font-semibold text-white bg-blue-600">
             <h2 className="mb-5">This is our information</h2>
             <h2 className="mb-5">Nigeria</h2>
             <h2>Port Harcourt</h2>

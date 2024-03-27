@@ -1,5 +1,5 @@
-import Tailwind from "../../components/Tailwind"
-import Scroll from "../Scrolldown"
+import Tailwind from "../components/Tailwind"
+import Scroll from "../components/Scrolldown"
 
 const MainPage = () => {
     return(

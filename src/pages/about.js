@@ -1,5 +1,5 @@
-import Explore from "../explore"
-import FootExplore from "../footexplore"
+import Explore from "../components/explore"
+import FootExplore from "../components/footexplore"
 
 const About = () => {
     return(

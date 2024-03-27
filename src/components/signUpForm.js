@@ -7,7 +7,7 @@ import {faCheck, faTimes, faInfoCircle} from "@fortawesome/free-solid-svg-icons"
 import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon} from "@fortawesome/react-fontawesome"
 import Regsuccess from "./Regsuccess";
-import { database } from "./pages/FirebaseConfig";
+import { database } from "../pages/FirebaseConfig";
 import {createUserWithEmailAndPassword} from 'firebase/auth'
 // import { withRouter } from "react-router-dom";
 // import Regsuccess from "./Regsuccess";
